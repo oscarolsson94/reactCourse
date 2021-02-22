@@ -9,3 +9,7 @@ delete reportWebVitals, remove import in index.js
 
 to start up the project:
 npm run start (your path must be pointing to the main project folder)
+
+
+snippet usage:
+sfc + tab => generates boiler plate code for a component.
