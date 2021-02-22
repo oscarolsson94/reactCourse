@@ -1,0 +1,4 @@
+install react snippet extension
+
+install a new react project at your location:
+npx create-react-app <project name>
