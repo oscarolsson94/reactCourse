@@ -2,3 +2,10 @@ install react snippet extension
 
 install a new react project at your location:
 npx create-react-app <project name>
+
+delete:
+delete reportWebVitals, remove import in index.js
+
+
+to start up the project:
+npm run start (your path must be pointing to the main project folder)
