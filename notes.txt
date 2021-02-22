@@ -1,3 +1,28 @@
+- React is a JavaScript library.
+
+- Usually called a "framework".
+
+- Used to build front-end apps.
+
+- Allows user-interaction at a new level.
+
+------------
+
+- Components can have a "state", which is an obkect that determines how
+  that component renders and behaves.
+
+- We can also have "application level" state by using a "state manager"
+  like Redux or Reacts own conext API.
+
+  State object:
+
+  state = {
+    title: 'xxx',
+    body: 'xxx',
+    isFeatured: true
+  }
+
+
 install react snippet extension
 
 install a new react project at your location:
