@@ -18,7 +18,7 @@ const Home = () => {
     useEffect(() => { //runs every time website renders (when state changes)
         console.log('use effect ran');
     }, [name]); //empty array will make it run only on initial refresh
-                //watches the name variable, if it changes, the function runs
+                //watches the name variable, if the value if it changes, the function runs
 
   return (
     <div className="home">

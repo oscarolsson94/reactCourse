@@ -38,3 +38,8 @@ npm run start (your path must be pointing to the main project folder)
 
 snippet usage:
 sfc + tab => generates boiler plate code for a component.
+
+
+
+JSON server:
+npx json-server --watch data/db.json --port 8000
