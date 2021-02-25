@@ -43,3 +43,7 @@ sfc + tab => generates boiler plate code for a component.
 
 JSON server:
 npx json-server --watch data/db.json --port 8000
+
+
+To use React Router:
+npm install react-router-dom@5              // 5 is latest stable build
