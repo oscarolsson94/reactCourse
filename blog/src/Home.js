@@ -3,8 +3,7 @@ import BlogList from "./BlogList";
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null);
-
-    const [name, setName] = useState('mario');
+    const [isPending, setIsPending] = useState(true);
 
     useEffect(() => {
         fetch('http://localhost:8000/blogs') //fetch data from our json-server
@@ -14,6 +13,7 @@ const Home = () => {
             .then(data => {
                 console.log(data); //data is now an array of objects
                 setBlogs(data);
+                setIsPending(false); //used to create loading message while data is being fetched
             });
     }, []);
 
@@ -23,7 +23,8 @@ const Home = () => {
     //             //watches the name variable, if the value if it changes, the function runs
 
   return (
-    <div className="home">
+      <div className="home">
+          {isPending && <div>Loading...</div>} 
           {blogs && <BlogList blogs={blogs} title="All Blogs" />}
     </div>
   );
