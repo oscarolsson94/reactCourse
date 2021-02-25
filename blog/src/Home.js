@@ -1,30 +1,10 @@
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-    const [blogs, setBlogs] = useState(null);
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetch('http://localhost:8000/blogs') //fetch data from our json-server
-            .then(res => {
-                if (!res.ok) { // error coming back from server
-                    throw Error('could not fetch the data for that resource');
-                } 
-                return res.json(); //convert json-object into javascript objects
-            })
-            .then(data => {
-                console.log(data); //data is now an array of objects
-                setBlogs(data);
-                setIsPending(false); //used to create loading message while data is being fetched
-            })
-            .catch(err => {
-                setIsPending(false);
-                setError(err.message);
-                setError(null);
-            })
-    }, []);
+    const { data: blogs, isPending, error } = useFetch('http://localhost:8000/blogs');
 
     // useEffect(() => { //runs every time website renders (when state changes)
     //     console.log('use effect ran');
